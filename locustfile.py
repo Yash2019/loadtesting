@@ -29,7 +29,7 @@ class StudentPortalUser(HttpUser):
         invalid_roll = "202699999991"
         with self.client.get(
             f'/get_result/{invalid_roll}',
-            name='/get_result/[invalid_roll_number]',
+            name='/get_results/[invalid_roll_number]',
             catch_response=True
         ) as res:
             if res.status_code in (200, 404):

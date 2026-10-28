@@ -28,7 +28,7 @@ class StudentPortalUser(HttpUser):
     def get_invlalid_task(self):
         invalid_roll = "202699999991"
         with self.client.get(
-            f'/get_result/{invalid_roll}',
+            f'/get_results/{invalid_roll}',
             name='/get_results/[invalid_roll_number]',
             catch_response=True
         ) as res:

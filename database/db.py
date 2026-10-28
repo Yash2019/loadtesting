@@ -5,7 +5,7 @@ from sqlalchemy.orm import DeclarativeBase
 engine = create_async_engine(
     url=Config.DATABASE_URL,
     echo=False,
-    pool_size=30
+    pool_size=30,
     max_overflow=20,
     pool_timeout = 30,
 )
